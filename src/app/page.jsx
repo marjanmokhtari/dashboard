@@ -65,15 +65,17 @@ function Right_sec() {
         <section className='w-3/4 md:w-1/2 lg:w-1/3 xl:w-[80%] justify-center *:justify-center *:flex  *:flex-wrap   flex flex-wrap'>
           <h6 className='text-3xl text-[#eaeff4] w-full'>Welcome to Modernize</h6>
           <p className='text-[#7c8fac]'>Your Admin Dashboard</p>
-          <div className=' w-full  md:px-0 flex *:flex  *:items-center mt-6'>
-            <button className='my-2 mx-2  ms-0 border rounded-md w-full md:w-[200px] flex justify-center'>
-              <Image className='w-[16px] mx-[8px]' src={Google}></Image>
-              <p className=' p-1'>sign in with google</p>
-            </button>
-            <button className='my-2 mx-2  ms-0 border rounded-md w-full md:w-[200px] flex justify-center'>
-              <Image className='w-[40px] ' src={Facbook}></Image>
-              <p className=' p-1'>sign in with FB</p>
-            </button>
+          <div className=' w-full flex *:flex *:items-center mt-6'>
+            <div className=' w-[100%] flex *:mx-2 items-center flex-wrap md:flex-nowrap  '>
+              <button className='my-2  md:w-1/2  ms-0 border rounded-md w-full  flex  justify-center items-center'>
+                <Image className='w-[16px] mx-[8px]' src={Google}></Image>
+                <p className=' p-1'>sign in with google</p>
+              </button>
+              <button className='my-2  md:w-1/2  ms-0 border rounded-md w-full  flex justify-center items-center'>
+                <Image className='w-[40px] ' src={Facbook}></Image>
+                <p className=' p-1'>sign in with FB</p>
+              </button>
+            </div>
           </div>
           <div className=' w-full flex flex-wrap items-center *:px-3  '>
             <div className='w-[100px] h-[1px] bg-[#7c8fac]'></div>
@@ -83,7 +85,7 @@ function Right_sec() {
 
 
           {/* ************************ */}
-          <section className='flex flex-wrap '>
+          <section className='flex flex-wrap w-full '>
             <div className=' w-full  *:w-full bg-[#2a3447] mt-5 '>
               <label htmlFor="Username" className='text-[#7c8fac] leading-10'>Username</label>
               <div className='border border-[#465670] rounded-md bg-[#2a3447]   '>
@@ -102,7 +104,7 @@ function Right_sec() {
           </section>
         </section>
       </section>
-  </section>
- 
+    </section>
+
   )
 }
