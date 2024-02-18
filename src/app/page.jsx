@@ -63,7 +63,7 @@ function Right_sec() {
     <section className=' w-full   flex flex-wrap '>
       <section className='w-full flex flex-wrap justify-center  *:flex   pt-14  '>
         <section className='w-3/4 md:w-1/2 lg:w-1/3 xl:w-[80%] justify-center *:justify-center *:flex  *:flex-wrap   flex flex-wrap'>
-          <h6 className='text-3xl text-[#eaeff4] w-full'>Welcome to Modernize</h6>
+          <h6 className='md:text-3xl text-[#eaeff4] w-full'>Welcome to Modernize</h6>
           <p className='text-[#7c8fac]'>Your Admin Dashboard</p>
           <div className=' w-full flex *:flex *:items-center mt-6'>
             <div className=' w-[100%] flex *:mx-2 items-center flex-wrap md:flex-nowrap  '>
@@ -78,9 +78,9 @@ function Right_sec() {
             </div>
           </div>
           <div className=' w-full flex flex-wrap items-center *:px-3  '>
-            <div className='w-[100px] h-[1px] bg-[#7c8fac]'></div>
-            <span className='text-[#eaeff4] my-2'>or sign in with</span>
-            <div className='w-[100px] h-[1px] bg-[#7c8fac]'></div>
+            <div className='w-[50px] md:w-[100px] h-[1px] bg-[#7c8fac]'></div>
+            <span className='text-[#eaeff4] my-2 text-sm'>or sign in with</span>
+            <div className='w-[50px] md:w-[100px] h-[1px] bg-[#7c8fac]'></div>
           </div>
 
 
