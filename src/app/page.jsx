@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+// add mui componet 
+import Checkbox from '@mui/material/Checkbox';
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 
 
@@ -28,7 +31,7 @@ export default function Page() {
   // };
 
   return (
-    <main className='w-full  flex flex-wrap '>
+    <main className='w-full  flex flex-wrap min-h-[100vh]'>
       {/* <input type="text" placeholder='enter name' value={nameuser} onChange={(e) => setNameuser(e.target.value)} />
       <input type="text" placeholder='enter pass' value={pass} onChange={(e) => setPass(e.target.value)} />
       <button onClick={Checkpas}>click</button> */}
@@ -45,9 +48,10 @@ export default function Page() {
 
 
 function Left_sec() {
+
   return (
-    <section className=' w-full bg-[#323b4f]'>
-      <figure className='px-10  py-5'>
+    <section className=' w-full bg-[#323b4f] py-7'>
+      <figure className='px-10'>
         <Image src={Logo}></Image>
       </figure>
       <section className=' w-full xl:flex justify-center content-center items-center py-24 hidden '>
@@ -59,11 +63,27 @@ function Left_sec() {
   )
 }
 function Right_sec() {
+  const [myuser, setMyuser] = useState({ name: 'admin', password: 'admin' })
+  const [username, setUsername] = useState()
+  const [pass, setPaas] = useState()
+  const router = useRouter()
+
+
+  const check_user = () => {
+
+    if (username === myuser.name && pass === myuser.password) {
+      router.push('/dashboard')
+    } else {
+      alert(`Pleas Enter\nuser: admin\npassword: admin`)
+    }
+  }
+
+
   return (
     <section className=' w-full   flex flex-wrap '>
       <section className='w-full flex flex-wrap justify-center  *:flex   pt-14  '>
         <section className='w-3/4 md:w-1/2 lg:w-1/3 xl:w-[80%] justify-center *:justify-center *:flex  *:flex-wrap   flex flex-wrap'>
-          <h6 className='md:text-3xl text-[#eaeff4] w-full'>Welcome to Modernize</h6>
+          <h6 className='md:text-3xl text-xl text-[#eaeff4] w-full'>Welcome to Modernize</h6>
           <p className='text-[#7c8fac]'>Your Admin Dashboard</p>
           <div className=' w-full flex *:flex *:items-center mt-6'>
             <div className=' w-[100%] flex *:mx-2 items-center flex-wrap md:flex-nowrap  '>
@@ -89,18 +109,31 @@ function Right_sec() {
             <div className=' w-full  *:w-full bg-[#2a3447] mt-5 '>
               <label htmlFor="Username" className='text-[#7c8fac] leading-10'>Username</label>
               <div className='border border-[#465670] rounded-md bg-[#2a3447]   '>
-                <input type="text" id='Username' className='custom_inp py-3 rounded-md focus:bg-[#2a3447]  w-[30%] bg-[#2a3447] outline-none px-2 ' />
+                <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" id='Username' placeholder='admin' className='custom_inp py-3 rounded-md focus:bg-[#2a3447]  w-[30%] bg-[#2a3447] outline-none px-2 ' />
               </div>
             </div>
             <div className='w-full  *:w-full bg-[#2a3447] mt-5 '>
               <label htmlFor="Pass" className='text-[#7c8fac] leading-10'>PassWord</label>
               <div className='border border-[#465670] rounded-md bg-[#2a3447]   '>
-                <input type="text" id='Pass' className='custom_inp py-3 rounded-md focus:bg-[#2a3447]  w-[30%] bg-[#2a3447] outline-none px-2 ' />
+                <input value={pass} onChange={(e) => setPaas(e.target.value)} type="text" id='Pass' placeholder='admin' className='custom_inp py-3 rounded-md focus:bg-[#2a3447]  w-[30%] bg-[#2a3447] outline-none px-2 ' />
               </div>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div className=' w-full  *:text-sm lg:text-xl my-8 flex items-center justify-between'>
+              <div className=' w-[60%] flex items-center *:cursor-pointer'>
+                <Checkbox {...label} />
+                <p>Remember this Device</p>
+              </div>
+              <span className=' w-[40%] flex justify-end text-[#5d87ff] cursor-pointer'>
+                Forgot Password ?
+              </span>
+            </div>
+            <div className=' w-full '>
+              <span onClick={check_user} className=' w-full flex justify-center bg-[#444d5d] rounded-md py-2'>sign in</span>
+            </div>
+            <div className=' w-full  *:cursor-pointer flex justify-start *:text-sm my-8'>
+              <span>New to Modernize?</span>
+              <span className='text-[#5d87ff]'>Create an account</span>
+            </div>
           </section>
         </section>
       </section>
