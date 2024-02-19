@@ -1,9 +1,15 @@
 import React from 'react'
+import '../globals.css'
 
 export default function page() {
   return (
-    <div>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem sunt unde aspernatur quod voluptatem est aut harum velit. Esse saepe perferendis ea eius architecto deserunt ipsam, vero commodi accusantium aspernatur.
-    </div>
+   <section className=' w-full flex flex-wrap'>
+    <section className=' w-[70%] '>
+      <div className=' text-white'>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit veniam doloribus neque praesentium suscipit labore odit explicabo voluptatibus impedit laborum rerum, laudantium quaerat qui. Delectus magnam debitis fugiat quia quae.
+        
+      </div>
+    </section>
+   </section>
   )
 }

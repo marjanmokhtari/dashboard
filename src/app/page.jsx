@@ -17,31 +17,14 @@ import Google from './assets/img/google.svg'
 import Facbook from './assets/img/facbook.svg'
 
 export default function Page() {
-  // const [admin,setAdmin] = useState({ name: "admin", password: "admin" });
-  // const [nameuser, setNameuser] = useState('');
-  // const [pass, setPass] = useState('');
-  // const router = useRouter();
-
-  // const Checkpas = () => {
-  //   if (nameuser === admin.name && pass === admin.password) {
-  //     router.push('/dashboard');
-  //   } else {
-  //     alert('Incorrect username or password');
-  //   }
-  // };
-
   return (
     <main className='w-full  flex flex-wrap min-h-[100vh]'>
-      {/* <input type="text" placeholder='enter name' value={nameuser} onChange={(e) => setNameuser(e.target.value)} />
-      <input type="text" placeholder='enter pass' value={pass} onChange={(e) => setPass(e.target.value)} />
-      <button onClick={Checkpas}>click</button> */}
       <section className='xl:w-[60%] w-full'>
         <Left_sec></Left_sec>
       </section>
       <section className='xl:w-[40%] w-full bg-[#2a3447]'>
         <Right_sec></Right_sec>
       </section>
-
     </main>
   );
 }
