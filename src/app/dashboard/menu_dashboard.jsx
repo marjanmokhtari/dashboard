@@ -22,9 +22,16 @@ import { PiCertificate } from "react-icons/pi";
 
 export default function Menu_dashboard() {
     const router = useRouter()
-    // function para() {
-    //     router.push('/dashboard/chat')
-    // }
+    
+ 
+    function para(e){
+        console.log(e.target.innerText);
+        let pageName=e.target.innerText
+        router.push('/dashboard/'+pageName)
+    }
+
+
+
     return (
         <section className=' w-full py-5 bg-[#2a3447] *:w-full *:cursor-pointer'>
             {/* <button onClick={para}>go to jib</button> */}
@@ -38,11 +45,11 @@ export default function Menu_dashboard() {
                     <div className=' *:leading-10 *:ps-2  *:*:mx-1'>
                         <div className=' flex items-center'>
                             <GrAnalytics></GrAnalytics>
-                            <span>Analytical</span>
+                            <span onClick={(e)=>para(e)}>Analytical</span>
                         </div>
-                        <div className=' flex items-center'>
+                        <div className=' flex items-center hover:bg-[#3b4455] hover:rounded-md'>
                             <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                            <span>eCommerce</span>
+                            <span onClick={(e)=>para(e)}>eCommerce</span>
                         </div>
                     </div>
                 </section>
@@ -53,19 +60,19 @@ export default function Menu_dashboard() {
                     <div className=' *:flex *:items-center *:ps-2 *:leading-10 *:*:mx-1'>
                         <div >
                             <BsChatSquareText></BsChatSquareText>
-                            <span>chat</span>
+                            <span onClick={(e)=>para(e)}>chat</span>
                         </div>
                         <div >
                             <LuCalendar></LuCalendar>
-                            <span>calender</span>
+                            <span onClick={(e)=>para(e)}>calender</span>
                         </div>
                         <div >
                             <MdOutlineMail></MdOutlineMail>
-                            <span>Email</span>
+                            <span onClick={(e)=>para(e)}>Email</span>
                         </div>
                         <div >
                             <IoCallOutline></IoCallOutline>
-                            <span>contact</span>
+                            <span onClick={(e)=>para(e)}>contact</span>
                         </div>
                         <div >
                             <PiCertificate></PiCertificate>

@@ -11,9 +11,9 @@ export default function layout({ children }) {
     return (
         <section className="parent">
             <section className="div1  text-black">
-               <Menu_dashboard></Menu_dashboard>
+                <Menu_dashboard></Menu_dashboard>
             </section>
-            <section className="div2 bg-sky-900 border border-teal-500 ">bdbdfbd </section>
+            <My_header></My_header>
             <section className="div3">
                 {children}
             </section>
@@ -24,3 +24,9 @@ export default function layout({ children }) {
 }
 
 
+function My_header() {
+    return (
+        <section className="div2 bg-sky-900 border border-teal-500 ">bdbdfbd </section>
+
+    )
+}

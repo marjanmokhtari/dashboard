@@ -55,7 +55,7 @@ function Right_sec() {
   const check_user = () => {
 
     if (username === myuser.name && pass === myuser.password) {
-      router.push('/dashboard')
+      router.push('/dashboard/Analytical')
     } else {
       alert(`Pleas Enter\nuser: admin\npassword: admin`)
     }
