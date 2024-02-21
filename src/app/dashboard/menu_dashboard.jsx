@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation';
 import Logo from '../assets/img/logo.svg'
 import Image from 'next/image';
@@ -17,28 +17,33 @@ import { BiTask } from "react-icons/bi";
 import { PiCertificate } from "react-icons/pi";
 
 import '../globals.css'
+import { IoCloseSharp } from "react-icons/io5";
 
 
 
 
-export default function Menu_dashboard() {
+export default function Menu_dashboard({ data }) {
     const router = useRouter()
     
- 
-    function para(e){
-        console.log(e.target.innerText);
-        let pageName=e.target.innerText
-        router.push('/dashboard/'+pageName)
+    function para(e) {
+     
+        let pageName = e.target.innerText
+        router.push('/dashboard/' + pageName)
     }
 
-
+    const close_menu = () => {
+        data.current.classList.add('hidden')
+    }
 
     return (
-        <section className=' py-5 bg-[#222a39] *:w-full *:cursor-pointer  '>
+        <section className=' py-5 bg-[#222a39] *:w-full *:cursor-pointer   '>
             {/* <button onClick={para}>go to jib</button> */}
             <section className=' w-full px-1 flex flex-wrap justify-center *:w-full *:text-[#7c8fac] '>
-                <figure className='py-2 ps-3'>
+                <figure className='py-2 ps-3 flex items-center justify-between'>
                     <Image src={Logo}></Image>
+                    <figcaption onClick={close_menu} className=' lg:hidden text-xl  '>
+                        <IoCloseSharp></IoCloseSharp>
+                    </figcaption>
                 </figure>
 
                 <section className='mt-10 ps-3'>
@@ -46,34 +51,34 @@ export default function Menu_dashboard() {
                     <div className=' *:leading-10 *:ps-2  *:*:mx-1'>
                         <div className=' flex items-center'>
                             <GrAnalytics></GrAnalytics>
-                            <span onClick={(e)=>para(e)}>Analytical</span>
+                            <span onClick={(e) => para(e)}>Analytical</span>
                         </div>
                         <div className=' flex items-center hover:bg-[#3b4455] hover:rounded-md'>
                             <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                            <span onClick={(e)=>para(e)}>eCommerce</span>
+                            <span onClick={(e) => para(e)}>eCommerce</span>
                         </div>
                     </div>
                 </section>
 
 
-                <section className=' mt-5 ps-3'>
+                <section className=' mt-5 ps-3 bg-[#222a39]'>
                     <span className='text-[#7c8fac] uppercase'>apps</span>
                     <div className=' *:flex *:items-center *:ps-2 *:leading-10 *:*:mx-1'>
                         <div >
                             <BsChatSquareText></BsChatSquareText>
-                            <span onClick={(e)=>para(e)}>chat</span>
+                            <span onClick={(e) => para(e)}>chat</span>
                         </div>
                         <div >
                             <LuCalendar></LuCalendar>
-                            <span onClick={(e)=>para(e)}>calender</span>
+                            <span onClick={(e) => para(e)}>calender</span>
                         </div>
                         <div >
                             <MdOutlineMail></MdOutlineMail>
-                            <span onClick={(e)=>para(e)}>Email</span>
+                            <span onClick={(e) => para(e)}>Email</span>
                         </div>
                         <div >
                             <IoCallOutline></IoCallOutline>
-                            <span onClick={(e)=>para(e)}>contact</span>
+                            <span onClick={(e) => para(e)}>contact</span>
                         </div>
                         <div >
                             <PiCertificate></PiCertificate>
@@ -101,36 +106,37 @@ export default function Menu_dashboard() {
                         </div>
                         <div >
                             <MdOutlineMail></MdOutlineMail>
-                            <span onClick={(e)=>para(e)}>Email</span>
+                            <span onClick={(e) => para(e)}>Email</span>
                         </div>
                         <div >
                             <IoCallOutline></IoCallOutline>
-                            <span onClick={(e)=>para(e)}>contact</span>
+                            <span onClick={(e) => para(e)}>contact</span>
                         </div>
                         <div >
                             <PiCertificate></PiCertificate>
                             <span>Courses</span>
                         </div>
                         <div >
-                            <TbBrandCtemplar></TbBrandCtemplar>
-                            <span>Employee</span>
+                            <PiCertificate></PiCertificate>
+                            <span>Courses</span>
                         </div>
                         <div >
-                            <CiStickyNote></CiStickyNote>
-                            <span>notes</span>
+                            <PiCertificate></PiCertificate>
+                            <span>Courses</span>
                         </div>
                         <div >
-                            <BsTicketPerforated></BsTicketPerforated>
-                            <span>ticket</span>
+                            <PiCertificate></PiCertificate>
+                            <span>Courses</span>
                         </div>
-                        <div>
-                            <LuPenSquare></LuPenSquare>
-                            <span>todo</span>
+                        <div >
+                            <PiCertificate></PiCertificate>
+                            <span>Courses</span>
                         </div>
-                        <div>
-                            <BiTask></BiTask>
-                            <span>Taskboard</span>
+                        <div >
+                            <PiCertificate></PiCertificate>
+                            <span>Courses</span>
                         </div>
+                    
                     </div>
                 </section>
             </section>
