@@ -3,28 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
 }
 
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    /* --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0; */
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
+      background-color: #2a3447;
 }
 
 @layer utilities {
@@ -33,14 +31,32 @@ body {
   }
 }
 
-.parent {
+/* .parent {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   }
-  
-  .div1 { grid-area: 1 / 1 / 6 / 2; }
-  .div2 { grid-area: 1 / 2 / 2 / 6; }
-  .div3 { grid-area: 2 / 2 / 6 / 6; }
+  .div1 { grid-area: 1 / 1 / 7 / 1;}
+  .div2 { grid-area: 1 / 2 / 2 / 7;}
+  .div3 { grid-area: 2 / 2 / 7 / 7; } */
+
+.div2 {
+  width: 100%;
+
+}
+
+.div1::-webkit-scrollbar {
+  width: 5px;
+}
+
+.div1::-webkit-scrollbar-thumb {
+  background-color: #1b222e;
+  border-radius: 20px;
+}
+
+
+.div1::-webkit-scrollbar-track {
+  background-color: #222a39;
+}

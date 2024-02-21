@@ -16,6 +16,7 @@ import { LuPenSquare } from "react-icons/lu";
 import { BiTask } from "react-icons/bi";
 import { PiCertificate } from "react-icons/pi";
 
+import '../globals.css'
 
 
 
@@ -33,7 +34,7 @@ export default function Menu_dashboard() {
 
 
     return (
-        <section className=' w-full py-5 bg-[#2a3447] *:w-full *:cursor-pointer'>
+        <section className=' py-5 bg-[#222a39] *:w-full *:cursor-pointer  '>
             {/* <button onClick={para}>go to jib</button> */}
             <section className=' w-full px-1 flex flex-wrap justify-center *:w-full *:text-[#7c8fac] '>
                 <figure className='py-2 ps-3'>
@@ -65,6 +66,38 @@ export default function Menu_dashboard() {
                         <div >
                             <LuCalendar></LuCalendar>
                             <span onClick={(e)=>para(e)}>calender</span>
+                        </div>
+                        <div >
+                            <MdOutlineMail></MdOutlineMail>
+                            <span onClick={(e)=>para(e)}>Email</span>
+                        </div>
+                        <div >
+                            <IoCallOutline></IoCallOutline>
+                            <span onClick={(e)=>para(e)}>contact</span>
+                        </div>
+                        <div >
+                            <PiCertificate></PiCertificate>
+                            <span>Courses</span>
+                        </div>
+                        <div >
+                            <TbBrandCtemplar></TbBrandCtemplar>
+                            <span>Employee</span>
+                        </div>
+                        <div >
+                            <CiStickyNote></CiStickyNote>
+                            <span>notes</span>
+                        </div>
+                        <div >
+                            <BsTicketPerforated></BsTicketPerforated>
+                            <span>ticket</span>
+                        </div>
+                        <div>
+                            <LuPenSquare></LuPenSquare>
+                            <span>todo</span>
+                        </div>
+                        <div>
+                            <BiTask></BiTask>
+                            <span>Taskboard</span>
                         </div>
                         <div >
                             <MdOutlineMail></MdOutlineMail>
