@@ -9,10 +9,10 @@ import Img6 from '../../assets/img/6.svg'
 
 export default function Row_one() {
     return (
-        <section className=' w-full'>
-            <section className=' *:*:*:py-10 w-full flex *:*:rounded-md  py-4 justify-between *:my-3 flex-wrap  *:rounded-lg *:w-1/2  *:md:w-1/3  *:xl:w-1/6 xl:flex-nowrap  '>
-                <section className='  flex justify-center  '>
-                    <div className=' w-[90%] bg-[#253662]'>
+        <section className=' w-full my-3 flex justify-center'>
+            <section className=' *:*:*:py-10 w-full flex  *:*:rounded-md *:px-2  *:justify-center  *:my-3 flex-wrap  *:rounded-lg *:w-1/2  *:md:w-1/3  *:xl:w-1/6 xl:flex-nowrap  '>
+                <section className='  flex  '>
+                    <div className=' w-[100%] bg-[#253662]'>
                         <div className=' w-full flex flex-wrap justify-center *:w-full  '>
                             <figure className=' flex justify-center'>
                                 <Image className=' w-[40px]' src={Img3}></Image>
@@ -23,8 +23,8 @@ export default function Row_one() {
                         </div>
                     </div>
                 </section>
-                <section className='  flex justify-center  '>
-                    <div className=' w-[90%] bg-[#4d3a2a]'>
+                <section className='  flex   '>
+                    <div className=' w-[100%] bg-[#4d3a2a]'>
                         <div className=' w-full flex flex-wrap justify-center *:w-full'>
                             <figure className=' flex justify-center'>
                                 <Image className=' w-[40px]' src={Img2}></Image>
@@ -35,8 +35,8 @@ export default function Row_one() {
                         </div>
                     </div>
                 </section>
-                <section className='  flex justify-center  '>
-                    <div className=' w-[90%] bg-[#1c455d]'>
+                <section className='  flex   '>
+                    <div className=' w-[100%] bg-[#1c455d]'>
                         <div className=' w-full flex flex-wrap justify-center *:w-full'>
                             <figure className=' flex justify-center'>
                                 <Image className=' w-[40px]' src={Img4}></Image>
@@ -47,8 +47,8 @@ export default function Row_one() {
                         </div>
                     </div>
                 </section>
-                <section className='  flex justify-center  '>
-                    <div className=' w-[90%] bg-[#4b313d] *:text-[#fa896b]'>
+                <section className='  flex '>
+                    <div className=' w-[100%] bg-[#4b313d] *:text-[#fa896b]'>
                         <div className=' w-full flex flex-wrap justify-center *:w-full'>
                             <figure className=' flex justify-center'>
                                 <Image className=' w-[40px]' src={Img1}></Image>
@@ -59,8 +59,8 @@ export default function Row_one() {
                         </div>
                     </div>
                 </section>
-                <section className='  flex justify-center  '>
-                    <div className=' w-[90%] bg-[#1b3c48]'>
+                <section className='  flex  '>
+                    <div className=' w-[100%] bg-[#1b3c48]'>
                         <div className=' w-full flex flex-wrap justify-center *:w-full'>
                             <figure className=' flex justify-center'>
                                 <Image className=' w-[40px]' src={Img5}></Image>
@@ -71,8 +71,8 @@ export default function Row_one() {
                         </div>
                     </div>
                 </section>
-                <section className='  flex justify-center  '>
-                    <div className=' w-[90%] bg-[#1c455d]'>
+                <section className='  flex  '>
+                    <div className=' w-[100%] bg-[#1c455d]'>
                         <div className=' w-full flex flex-wrap justify-center *:w-full '>
                             <figure className=' flex justify-center'>
                                 <Image className=' w-[40px]' src={Img6}></Image>

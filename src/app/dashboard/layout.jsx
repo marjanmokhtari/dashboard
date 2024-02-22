@@ -46,7 +46,7 @@ export default function layout({ children }) {
                         <Mycontext.Provider value={mymenu}>
                             <My_header></My_header>
                         </Mycontext.Provider>
-                        <section className="div3 bg-slate-500 w-full  ">
+                        <section className="div3 bg-slate-500 w-full overflow-hidden  ">
                             {children}
                         </section>
                     </section>

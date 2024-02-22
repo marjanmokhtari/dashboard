@@ -18,11 +18,11 @@ import Facbook from './assets/img/facbook.svg'
 
 export default function Page() {
   return (
-    <main className='w-full  flex flex-wrap min-h-[100vh]'>
+    <main className='w-full  flex flex-wrap min-h-[100vh] overflow-hidden'>
       <section className='xl:w-[60%] w-full'>
         <Left_sec></Left_sec>
       </section>
-      <section className='xl:w-[40%] w-full bg-[#2a3447]'>
+      <section className='xl:w-[40%] w-full bg-[#2a3447] '>
         <Right_sec></Right_sec>
       </section>
     </main>
