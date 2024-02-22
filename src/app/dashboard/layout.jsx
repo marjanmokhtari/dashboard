@@ -7,6 +7,19 @@ import Menu_dashboard from './menu_dashboard';
 import { IoMdMenu } from "react-icons/io";
 import { IoIosSearch } from "react-icons/io";
 import { useContext } from 'react';
+import Image from 'next/image';
+
+
+// import mui
+import Badge from '@mui/material/Badge';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+
+
+// import img
+import User1 from '../assets/img/user-1.webp'
+import Flagen from '../assets/img/flag-en.svg'
 
 
 
@@ -15,7 +28,7 @@ export default function layout({ children }) {
 
     const mymenu = useRef()
 
-  
+
     return (
         <section className=" w-full  overflow-hidden  h-[100vh] flex ">
 
@@ -52,7 +65,7 @@ export default function layout({ children }) {
 function My_header() {
     const click_menu = useContext(Mycontext)
     function openMenu(e) {
-       
+
         click_menu.current.classList.add('w-[50%]')
         click_menu.current.classList.add('fixed')
         click_menu.current.classList.add('md:w-[30%]')
@@ -61,16 +74,16 @@ function My_header() {
 
 
     return (
-        <section className="div2 h-[70px]  bg-[#2a3447] overflow-hidden ">
+        <section className="div2  bg-[#2a3447] overflow-hidden ">
             <header className=' w-full h-full flex p-5  '>
-                <section className='w-1/2 border *:cursor-pointer '>
-                    <div className=' w-full flex items-center'>
-                        <div className=' flex *:mx-2 *:text-xl'>
+                <section className='w-1/2  *:cursor-pointer '>
+                    <div className=' w-full flex items-center h-full *:text-[#7c8fac]'>
+                        <div className=' flex *:mx-2 *:text-xl items-center h-full'>
                             <span onClick={(e) => openMenu(e)} className='lg:hidden '><IoMdMenu ></IoMdMenu></span>
-                            <span  className='  hidden lg:flex'><IoMdMenu ></IoMdMenu></span>
+                            <span className='  hidden lg:flex'><IoMdMenu ></IoMdMenu></span>
                             <IoIosSearch></IoIosSearch>
                         </div>
-                        <nav className=''>
+                        <nav className=' hidden lg:flex'>
                             <ul className=' flex *:mx-2  '>
                                 <li >apps</li>
                                 <li>chat</li>
@@ -80,7 +93,25 @@ function My_header() {
                         </nav>
                     </div>
                 </section>
-                <section className='w-1/2 border border-red-500 '>sdggg</section>
+                <section className='w-1/2 '>
+                    <section className=' w-full h-full flex justify-end *:mx-2 items-center'>
+                        <div className=''>
+                            <span className=' w-[30px] h-[30px] flex rounded-full relative'>
+                                    <Image className=' w-full h-full absolute rounded-full object-cover'  src={Flagen}></Image>
+                            </span>
+                        </div>
+                        <div className=''>
+                            <Badge badgeContent={4} color="primary">
+                                <NotificationsNoneIcon color="action" className=' text-2xl text-[#7c8fac] text-[30px]' />
+                            </Badge>
+                        </div>
+                        <div className=''>
+                            <Image className='w-[30px] h-[30px] rounded-full' src={User1} ></Image>
+                        </div>
+
+                    </section>
+
+                </section>
             </header>
         </section>
 
