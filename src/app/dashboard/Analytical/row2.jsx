@@ -8,6 +8,8 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image';
 import Stack from '@mui/material/Stack';
 import { PieChart } from '@mui/x-charts/PieChart';
+import { HiMiniCurrencyDollar } from "react-icons/hi2";
+
 
 const data = [
   { label: 'Group A', value: 35 },
@@ -75,7 +77,9 @@ export default function Row_two() {
           <section className='my-3 xl:my-0 xl:me-0 w-full md:w-1/2 xl:w-full  md:me-2 xl:mb-2 '>
             <Yearly_Breakup></Yearly_Breakup>
           </section>
-          <section className='my-3 xl:my-0 xl:ms-0  w-full md:w-1/2 xl:w-full md:ms-2 xl:mt-2 '>lorem200</section>
+          <section className='my-3 xl:my-0 xl:ms-0  w-full md:w-1/2 xl:w-full md:ms-2 xl:mt-2 '>
+            <Monthly_Earnings></Monthly_Earnings>
+          </section>
         </section>
 
 
@@ -270,6 +274,26 @@ function Circle_chart() {
         />
 
       </Stack>
+    </section>
+  )
+}
+
+function Monthly_Earnings() {
+  return (
+    <section className=' w-full  p-5 flex flex-wrap *:w-full'>
+      <div className='  '>
+        <div className=' w-full flex justify-between items-center'>
+          <span className='text-[#eaeff4]'>Monthly Earnings</span>
+          <HiMiniCurrencyDollar className=' text-[#44b7f7] text-5xl'></HiMiniCurrencyDollar>
+        </div>
+        <div className=' *:w-full flex flex-wrap '>
+          <span className=' font-semibold text-left text-2xl text-[#eaeff4]'>$6,820</span>
+          <span className=' text-xs text-[#7c8fac] my-2'>+9% last year</span>
+        </div>
+
+      </div>
+
+      <div></div>
     </section>
   )
 }
