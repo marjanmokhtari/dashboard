@@ -47,8 +47,8 @@ export default function Menu_dashboard({ data }) {
                 </figure>
 
                 <section className='mt-10 ps-3'>
-                    <span className='uppercase'>home</span>
-                    <div className=' *:leading-10 *:ps-2  *:*:mx-1'>
+                    <span className='uppercase text-sm font-semibold'>home</span>
+                    <div className=' *:leading-10 *:ps-2  *:*:mx-1 *:text-sm'>
                         <div className=' flex items-center'>
                             <GrAnalytics></GrAnalytics>
                             <span onClick={(e) => para(e)}>Analytical</span>
@@ -62,8 +62,8 @@ export default function Menu_dashboard({ data }) {
 
 
                 <section className=' mt-5 ps-3 bg-[#222a39]'>
-                    <span className='text-[#7c8fac] uppercase'>apps</span>
-                    <div className=' *:flex *:items-center *:ps-2 *:leading-10 *:*:mx-1'>
+                    <span className='text-[#7c8fac] uppercase text-sm font-semibold'>apps</span>
+                    <div className=' *:flex *:items-center *:ps-2 *:leading-10 *:*:mx-1 *:text-sm'>
                         <div >
                             <BsChatSquareText></BsChatSquareText>
                             <span onClick={(e) => para(e)}>chat</span>

@@ -54,9 +54,9 @@ const xLabels = [
 export default function Row_two() {
   return (
     <section className=' w-full py-5 overflow-hidden  '>
-      <section className=' w-full  flex-wrap xl:flex-nowrap flex  overflow-hidden *:mx-2 '>
+      <section className=' w-full  flex-wrap xl:flex-nowrap flex  overflow-hidden *:mx-2  '>
         <section className='  w-full xl:w-4/6 border border-[#343e50] shadow-sm shadow-[#343e50] rounded-md flex justify-center overflow-hidden '>
-          <section className=' w-[100%] overflow-hidden flex flex-wrap '>
+          <section className=' w-[100%] overflow-hidden flex flex-wrap pt-8 '>
             <section className=' mt-2  w-full md:w-[70%] *:text-[#fff] overflow-hidden *:w-[100%]  *:h-[400px] *:object-cover'>
               <Mychart></Mychart>
 
