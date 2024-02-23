@@ -6,6 +6,8 @@ import { BsArrowDownLeftCircleFill } from "react-icons/bs";
 
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 import { SparkLineChart } from '@mui/x-charts/SparkLineChart';
 
 
@@ -33,7 +35,9 @@ export default function Row_three() {
                         <section className='  my-3 lg:my-0 md:me-2'>
                             <Customers></Customers>
                         </section>
-                        <section className=' bg-emerald-900 my-3 lg:my-0 md:ms-2'>lorem</section>
+                        <section className='  my-3 lg:my-0 md:ms-2'>
+                            <Projects></Projects>
+                        </section>
                     </section>
                     <section className=' bg-yellow-400 my-3 lg:my-0 '>1</section>
                 </section>
@@ -102,7 +106,7 @@ function Customers() {
                 <span>Customers</span>
                 <span className=' my-2 text-[#fff] text-xl font-semibold'>36,358</span>
                 <div className=' flex items-center  my-2 '>
-                    <BsArrowDownLeftCircleFill className='rounded-full text-xl text-[#fff] me-2'></BsArrowDownLeftCircleFill>
+                    <BsArrowDownLeftCircleFill className='rounded-full text-xl text-[#fa896b] me-2'></BsArrowDownLeftCircleFill>
                     <span>+9%</span>
                 </div>
             </div>
@@ -116,9 +120,9 @@ function Customers() {
 function Cust_chrt() {
     const [showTooltip, setShowTooltip] = React.useState(true);
     const handleTooltipChange = (event) => {
-      setShowTooltip(event.target.checked);
+        setShowTooltip(event.target.checked);
     };
-  
+
     return (
         <div className=' w-full '>
             <Stack direction="column" sx={{ width: '100%' }}>
@@ -127,7 +131,7 @@ function Cust_chrt() {
                 <Stack direction="row" sx={{ width: '100%' }}>
                     <Box sx={{ flexGrow: 1 }}>
                         <SparkLineChart
-                            data={[30, 25, 35, 40, 20, 30,40]}
+                            data={[30, 25, 35, 40, 20, 30, 40]}
                             height={100}
                             colors={['#44b7f7']}
                             showTooltip={showTooltip}
@@ -135,6 +139,58 @@ function Cust_chrt() {
                         />
                     </Box>
 
+                </Stack>
+            </Stack>
+        </div>
+    )
+}
+
+function Projects() {
+    return (
+
+        <section className=' w-full text-[#7c8fac]  *:w-full  border border-[#343e50] shadow-sm shadow-[#343e50] rounded-md '>
+            <div className=' *:w-full flex flex-wrap *:flex p-5 '>
+                <span>Projects</span>
+                <span className=' my-2 text-[#fff] text-xl font-semibold'>78,298</span>
+                <div className=' flex items-center  my-2 '>
+                    <BsArrowDownLeftCircleFill className='rounded-full text-xl text-[#13deb9] me-2'></BsArrowDownLeftCircleFill>
+                    <span>+9%</span>
+                </div>
+            </div>
+            <div>
+                <Proj_chart></Proj_chart>
+            </div>
+        </section>
+    )
+
+}
+
+
+function Proj_chart() {
+    const [showHighlight, setShowHighlight] = React.useState(true);
+    const [showTooltip, setShowTooltip] = React.useState(true);
+
+    const handleHighlightChange = (event) => {
+        setShowHighlight(event.target.checked);
+    };
+
+    const handleTooltipChange = (event) => {
+        setShowTooltip(event.target.checked);
+    };
+    return (
+        <div className=' w-full '>
+            <Stack direction="column" sx={{ width: '100%' }}>
+                <Stack direction="row" sx={{ width: '100%' }}>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <SparkLineChart
+                            plotType="bar"
+                            data={[4, 10, 9, 7, 9, 10, 11, 8,10]}
+                            height={100}
+                            showHighlight={showHighlight}
+                            showTooltip={showTooltip}
+                            colors={['#557be4']}
+                        />
+                    </Box>
                 </Stack>
             </Stack>
         </div>
