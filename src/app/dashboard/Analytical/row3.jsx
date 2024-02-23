@@ -11,10 +11,10 @@ import MYser2 from '../../assets/img/user2.webp'
 import MYser3 from '../../assets/img/user3.webp'
 import MYser4 from '../../assets/img/user4.webp'
 import MYser5 from '../../assets/img/user5.webp'
-
+import './mystyle.css'
 import { SparkLineChart } from '@mui/x-charts/SparkLineChart';
 import { BiMessageDetail } from "react-icons/bi";
-
+import PI from '../../assets/img/piggy.png'
 
 
 import './mystyle.css'
@@ -232,6 +232,63 @@ function Coming_soon() {
                     </span>
                 </div>
             </div>
+        </section>
+    )
+}
+
+
+function Best_selling() {
+    return (
+        <section className=' w-full h-full bg-[#5d87ff] flex flex-wrap content-start   rounded-md shadow-sm shadow-[#343e50]   '>
+            <section className=' *:w-full w-full px-5  '>
+                <div>
+                    <div className=' text-white '>
+                        <h6 className=' font-semibold text-lg pt-3'>Best selling products</h6>
+                        <span>Overview 2023</span>
+                    </div>
+                </div>
+                <div></div>
+            </section>
+            <section className=' w-full flex justify-center ' >
+                <div className=' w-[300px] h-[300px]   mybg '></div>
+            </section>
+            <section className=' bg-[#2a3447]   w-full rounded-md *:w-full  -translate-y-10 p-3 mx-5 '>
+                <div className=''>
+                    <div className=' flex justify-between'>
+                            <div className=' w-full *:flex flex-wrap flex *:w-full'>
+                                <span className=' text-white'>MaterialPro</span>
+                                <span className=' text-sm text-[#7c8fac]'>$23,568</span>
+                            </div>
+                            <div className=' flex items-center'>
+                                <span>55%</span>
+                            </div>
+                    </div>
+                    <div className=' w-full my-1'>
+                        <div className=' relative w-full bg-[#364975] h-1 rounded-md *:rounded-md'>
+                            <div className=' absolute w-1/2 bg-[#5d87ff] left-0 h-1'></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div className=' pt-2'>
+                    <div className=' flex justify-between'>
+                            <div className=' w-full *:flex flex-wrap flex *:w-full'>
+                                <span className=' text-white'>MaterialPro</span>
+                                <span className=' text-sm text-[#7c8fac]'>$23,568</span>
+                            </div>
+                            <div className=' flex items-center'>
+                                <span>55%</span>
+                            </div>
+                    </div>
+                    <div className=' w-full my-1'>
+                        <div className=' relative w-full bg-[#305573] h-1 rounded-md *:rounded-md'>
+                            <div className=' absolute w-1/2 bg-[#44b7f7] left-0 h-1'></div>
+                        </div>
+
+                    </div>
+                </div>
+              
+            </section>
         </section>
     )
 }

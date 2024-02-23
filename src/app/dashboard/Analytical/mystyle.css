@@ -5,3 +5,13 @@
     color: white !important;
 
 }
+.mybg{
+    background-image: url(../../assets/img/piggy.png);
+    background-size: contain;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    
+
+}
