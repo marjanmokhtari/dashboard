@@ -5,13 +5,10 @@ import { BarChart } from '@mui/x-charts/BarChart';
 import './mystyle.css'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-import Image from 'next/image';
 import Stack from '@mui/material/Stack';
 import { PieChart } from '@mui/x-charts/PieChart';
 import { HiMiniCurrencyDollar } from "react-icons/hi2";
 import Box from '@mui/material/Box';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
 import { SparkLineChart } from '@mui/x-charts/SparkLineChart';
 
 const data = [
