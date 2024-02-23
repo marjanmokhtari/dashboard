@@ -3,16 +3,22 @@ import React from 'react'
 import { BarChart } from '@mui/x-charts/BarChart';
 import { CgMenuGridO } from "react-icons/cg";
 import { BsArrowDownLeftCircleFill } from "react-icons/bs";
-
+import Image from 'next/image';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
+import MYser1 from '../../assets/img/user-1.webp'
+import MYser2 from '../../assets/img/user2.webp'
+import MYser3 from '../../assets/img/user3.webp'
+import MYser4 from '../../assets/img/user4.webp'
+import MYser5 from '../../assets/img/user5.webp'
+
 import { SparkLineChart } from '@mui/x-charts/SparkLineChart';
+import { BiMessageDetail } from "react-icons/bi";
 
 
 
 import './mystyle.css'
+import { colors } from '@mui/material';
 const uData = [20, 15, 30, 25, 10, 15];
 const xLabels = [
     'Apr',
@@ -39,9 +45,13 @@ export default function Row_three() {
                             <Projects></Projects>
                         </section>
                     </section>
-                    <section className=' bg-yellow-400 my-3 lg:my-0 '>1</section>
+                    <section className=' my-3 lg:my-0 '>
+                        <Coming_soon />
+                    </section>
                 </section>
-                <section className=' bg-lime-950'>dv</section>
+                <section className=' bg-lime-950'>
+                    <Best_selling></Best_selling>
+                </section>
             </section>
         </section>
     )
@@ -184,7 +194,7 @@ function Proj_chart() {
                     <Box sx={{ flexGrow: 1 }}>
                         <SparkLineChart
                             plotType="bar"
-                            data={[4, 10, 9, 7, 9, 10, 11, 8,10]}
+                            data={[4, 10, 9, 7, 9, 10, 11, 8, 10]}
                             height={100}
                             showHighlight={showHighlight}
                             showTooltip={showTooltip}
@@ -194,5 +204,34 @@ function Proj_chart() {
                 </Stack>
             </Stack>
         </div>
+    )
+}
+
+function Coming_soon() {
+    return (
+        <section className=' w-full py-4 p-5 *:w-full border border-[#343e50] shadow-sm shadow-[#343e50] rounded-md'>
+            <div className=' flex my-5'>
+                <figure className=' w-[80px] h-[80px]'>
+                    <Image className=' rounded-md' src={MYser1}></Image>
+                </figure>
+                <div className=' mx-3 w-1/2'>
+                    <h6 className='text-[#f2f6fa] font-semibold text-lg'>Super awesome, Vue coming soon!</h6>
+                    <span className=' text-sm text-[#7c8fac]'>22 March, 2023</span>
+                </div>
+            </div>
+            <div className=' flex justify-between  py-5'>
+                <div className=' flex *:w-[50px] *:rounded-full *:border *:border-white *:border-2'>
+                    <Image src={MYser2}></Image>
+                    <Image className=' -translate-x-3' src={MYser3}></Image>
+                    <Image className=' -translate-x-6' src={MYser4}></Image>
+                    <Image className=' -translate-x-9' src={MYser5}></Image>
+                </div>
+                <div className=' flex items-center *:bg-[#253662]  *:text-2xl'>
+                    <span className=' *:text-[#5d87ff] p-2 rounded-md'>
+                        <BiMessageDetail></BiMessageDetail>
+                    </span>
+                </div>
+            </div>
+        </section>
     )
 }
