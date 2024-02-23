@@ -9,7 +9,10 @@ import Image from 'next/image';
 import Stack from '@mui/material/Stack';
 import { PieChart } from '@mui/x-charts/PieChart';
 import { HiMiniCurrencyDollar } from "react-icons/hi2";
-
+import Box from '@mui/material/Box';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import { SparkLineChart } from '@mui/x-charts/SparkLineChart';
 
 const data = [
   { label: 'Group A', value: 35 },
@@ -280,8 +283,8 @@ function Circle_chart() {
 
 function Monthly_Earnings() {
   return (
-    <section className=' w-full  p-5 flex flex-wrap *:w-full'>
-      <div className='  '>
+    <section className=' w-full  pt-5 flex flex-wrap *:w-full'>
+      <div className=' px-5 '>
         <div className=' w-full flex justify-between items-center'>
           <span className='text-[#eaeff4]'>Monthly Earnings</span>
           <HiMiniCurrencyDollar className=' text-[#44b7f7] text-5xl'></HiMiniCurrencyDollar>
@@ -293,7 +296,38 @@ function Monthly_Earnings() {
 
       </div>
 
-      <div></div>
+      <div>
+        <Sparkline_chart></Sparkline_chart>
+      </div>
+    </section>
+  )
+}
+
+
+function Sparkline_chart() {
+  const [showTooltip, setShowTooltip] = React.useState(true);
+  const handleTooltipChange = (event) => {
+    setShowTooltip(event.target.checked);
+  };
+
+  return (
+    <section className=' w-full'>
+      <Stack direction="column" sx={{ width: '100%' }}>
+       
+         
+        <Stack direction="row" sx={{ width: '100%' }}>
+          <Box sx={{ flexGrow: 1 }}>
+            <SparkLineChart
+              data={[25, 66, 20, 40, 12, 58, 20]}
+              height={100}
+              colors={['#44b7f7']}
+              showTooltip={showTooltip}
+
+            />
+          </Box>
+          
+        </Stack>
+      </Stack>
     </section>
   )
 }
