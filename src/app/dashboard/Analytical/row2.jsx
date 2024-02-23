@@ -5,6 +5,16 @@ import { BarChart } from '@mui/x-charts/BarChart';
 import './mystyle.css'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image';
+import Stack from '@mui/material/Stack';
+import { PieChart } from '@mui/x-charts/PieChart';
+
+const data = [
+  { label: 'Group A', value: 35 },
+  { label: 'Group B', value: 75 }
+];
+
+
 const people = [
   {
     id: 1,
@@ -65,7 +75,7 @@ export default function Row_two() {
           <section className='my-3 xl:my-0 xl:me-0 w-full md:w-1/2 xl:w-full  md:me-2 xl:mb-2 '>
             <Yearly_Breakup></Yearly_Breakup>
           </section>
-          <section className='my-3 xl:my-0 xl:ms-0  w-full md:w-1/2 xl:w-full md:ms-2 xl:mt-2 '>fdgdfg</section>
+          <section className='my-3 xl:my-0 xl:ms-0  w-full md:w-1/2 xl:w-full md:ms-2 xl:mt-2 '>lorem200</section>
         </section>
 
 
@@ -207,8 +217,59 @@ function Data_chart_right() {
 
 
 
-function Yearly_Breakup(){
-  return(
-    <section className=' w-full'></section>
+function Yearly_Breakup() {
+  return (
+    <section className=' w-full *:w-full flex flex-wrap p-5 '>
+      <div>
+        <span className=' text-[#eaeff4]'>Yearly Breakup</span>
+      </div>
+      <div className=' flex items-center '>
+        <div className=' flex flex-wrap'>
+          <span className=' w-full text-xl text-[#eaeff4]'>$36,358</span>
+          <span className=' w-full text-sm text-[#7c8fac]'>+9% last year</span>
+        </div>
+        <div >
+          <Circle_chart></Circle_chart>
+        </div>
+      </div>
+      <div >
+        <div className=' flex items-center  '>
+          <span className=' w-2 h-2 bg-[#5d87ff] flex items-center rounded-full me-1'></span>
+          <span className=' text-sm text-[#7c8fac]' >2023</span>
+        </div>
+        <div className=' flex items-center  '>
+          <span className=' w-2 h-2 bg-[#fff] flex items-center rounded-full me-1'></span>
+          <span className=' text-sm text-[#7c8fac]' >2022</span>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function Circle_chart() {
+
+  return (
+    <section className=' w-[100px] cursor-pointer'>
+      <Stack direction="row" className='  p-0 m-0'>
+        <PieChart
+          series={[
+            {
+              innerRadius: 60,
+              outerRadius: 50,
+              data,
+
+            },
+
+          ]}
+          margin={{ right: 5 }}
+          width={130}
+          height={120}
+          legend={{ hidden: true }}
+          colors={['#5d87ff', '#fff']}
+          tooltip={false}
+        />
+
+      </Stack>
+    </section>
   )
 }
