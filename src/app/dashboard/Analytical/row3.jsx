@@ -259,8 +259,8 @@ function Best_selling() {
                                 <span className=' text-white'>MaterialPro</span>
                                 <span className=' text-sm text-[#7c8fac]'>$23,568</span>
                             </div>
-                            <div className=' flex items-center'>
-                                <span>55%</span>
+                            <div className=' flex items-center bg-[#253662] rounded-md h-2/3 p-1'>
+                                <span className='text-[#5d87ff] text-sm'>55%</span>
                             </div>
                     </div>
                     <div className=' w-full my-1'>
@@ -276,8 +276,8 @@ function Best_selling() {
                                 <span className=' text-white'>MaterialPro</span>
                                 <span className=' text-sm text-[#7c8fac]'>$23,568</span>
                             </div>
-                            <div className=' flex items-center'>
-                                <span>55%</span>
+                            <div className=' flex items-center rounded-md h-2/3 p-1 bg-[#1c455d]'>
+                                <span className=' text-sm text-[#36b6ff]'>55%</span>
                             </div>
                     </div>
                     <div className=' w-full my-1'>
