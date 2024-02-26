@@ -60,3 +60,15 @@ body {
 .div1::-webkit-scrollbar-track {
   background-color: #222a39;
 }
+
+.MuiChartsLegend-mark{
+  border-radius: 20px !important;
+  width: 10px !important;
+  height: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.MuiBarElement-root{
+  width: 30px !important;
+
+}
