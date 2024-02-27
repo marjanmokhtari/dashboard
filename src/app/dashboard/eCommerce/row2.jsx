@@ -71,7 +71,7 @@ function Revenue() {
 
 function Chart_Rev() {
   return (
-    <section className='w-full'>
+    <section className='w-full py-2'>
       <BarChart sx={{ width: '100%' }}
 
         height={340}
@@ -201,7 +201,7 @@ function Row_right() {
       </section>
 
 
-      <section className='flex *:w-full p-5 flex-wrap w-full mt-3 border-[#343e50] text-[#eaeff4] shadow-sm shadow-[#343e50] rounded-md border   '>
+      <section className='flex *:w-full p-5 flex-wrap w-full mt-3 border-[#343e50] text-[#5d87ff] shadow-sm shadow-[#343e50] rounded-md border   '>
         <section>
           <h6 className=' text-xl py-2'>Monthly Earnings</h6>
         </section>
