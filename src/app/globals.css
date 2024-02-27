@@ -62,13 +62,26 @@ body {
 }
 
 .MuiChartsLegend-mark{
-  border-radius: 20px !important;
   width: 10px !important;
   height: 10px !important;
   display: flex !important;
   align-items: center !important;
+  stroke: #2a3447 !important;
+
 }
 .MuiBarElement-root{
-  width: 30px !important;
+  /* width: 30px !important; */
 
+}
+.MuiChartsAxis-line,.MuiChartsAxis-tick{
+  stroke: #b6b8bc !important;
+
+}
+
+body{
+  color: #b6b8bc !important;
+}
+tspan{
+  color: #b6b8bc !important;
+  fill: #b6b8bc !important;
 }

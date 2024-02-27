@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { BarChart } from '@mui/x-charts/BarChart';
-import { BsArrowDownLeftCircleFill } from "react-icons/bs";
+import { CgMenuGridO } from "react-icons/cg";
 
 import '../../globals.css'
 const uData = [2.5, 3.7, 3.2, 2.6, 1.9];
@@ -23,8 +23,8 @@ import { PieChart } from '@mui/x-charts/PieChart';
 
 const data2 = [
   { label: 'Expance', value: 55 },
-  { label: 'protfit', value: 55 },
   { label: 'Revenue', value: 55 },
+  { label: 'protfit', value: 55 },
 
 ];
 
@@ -66,7 +66,7 @@ function Chart_Rev() {
     <section className='w-full'>
       <BarChart sx={{ width: '100%' }}
 
-        height={300}
+        height={330}
 
         series={[
           { data: pData, label: 'Footware', id: 'Footware', stack: 'total', color: '#557be4' },
@@ -89,29 +89,53 @@ function Sales() {
       <section>
         <Chart_sal></Chart_sal>
       </section>
-      
+      <section className=' flex justify-between p-5 text-[#7c8fac]'>
+        <div className=' flex items-center '>
+          <div>
+            <CgMenuGridO className=' text-2xl bg-[#1c455d] rounded-md'></CgMenuGridO>
+          </div>
+          <div className=' *:w-full flex flex-wrap *:flex ms-2'>
+            <span className='text-xl'>$23,450</span>
+            <span className=' text-xs'>Profit</span>
+          </div>
+        </div>
+        <div className=' flex items-center'>
+          <div>
+            <CgMenuGridO className=' text-2xl bg-[#253662] rounded-md'></CgMenuGridO>
+          </div>
+          <div className=' *:w-full flex flex-wrap *:flex ms-2'>
+            <span className='text-xl'>$23,450</span>
+            <span className=' text-xs'>Profit</span>
+          </div>
+        </div>
+      </section>
     </section>
   )
 }
 
 function Chart_sal() {
   return (
-    <section className=' w-full flex justify-center  *:flex *:justify-center '>
-      <PieChart
-        series={[
-          {
-            innerRadius: 100,
-            outerRadius: 120,
-            data: data2,
-          },
-        ]}
-       width={500}
-       height={300}
-        slotProps={{
-          legend: { hidden: true },
-        }}
-        colors={['#557be4', '#fff', '#44aae4']}
-      />
+    <section className=' w-full flex justify-center  *:flex *:justify-center  '>
+      <div className=' w-full  flex justify-center  *:flex'>
+        <PieChart className=' m-0'
+          series={[
+            {
+              innerRadius: 100,
+              outerRadius: 120,
+              data: data2,
+            },
+          ]}
+          width={600}
+          height={250}
+          slotProps={{
+            legend: { hidden: true },
+          }}
+          margin={{ right: 5 }}
+
+
+          colors={['#557be4', '#fff', '#44aae4']}
+        />
+      </div>
     </section>
   )
 }
