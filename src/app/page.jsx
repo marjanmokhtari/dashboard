@@ -111,7 +111,7 @@ function Right_sec() {
               </span>
             </div>
             <div className=' w-full '>
-              <span onClick={check_user} className=' w-full flex justify-center bg-[#444d5d] rounded-md py-2'>sign in</span>
+              <span onClick={check_user} className=' w-full flex justify-center bg-[#5d87ff] text-[#fff] rounded-md py-2'>sign in</span>
             </div>
             <div className=' w-full  *:cursor-pointer flex justify-start *:text-sm my-8'>
               <span>New to Modernize?</span>

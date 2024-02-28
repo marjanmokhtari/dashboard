@@ -18,21 +18,29 @@ import { PiCertificate } from "react-icons/pi";
 
 import '../globals.css'
 import { IoCloseSharp } from "react-icons/io5";
+import MyAdmin from '../assets/img/user-1.webp'
 
+import { FaPowerOff } from "react-icons/fa";
 
 
 
 export default function Menu_dashboard({ data }) {
     const router = useRouter()
-    
+
     function para(e) {
-     
+
         let pageName = e.target.innerText
         router.push('/dashboard/' + pageName)
     }
 
     const close_menu = () => {
         data.current.classList.add('hidden')
+    }
+
+
+    const backlog=(e)=>{
+        console.log('hujjyf');
+        router.push('/')
     }
 
     return (
@@ -49,7 +57,7 @@ export default function Menu_dashboard({ data }) {
                 <section className='mt-10 ps-3'>
                     <span className='uppercase text-sm font-semibold'>home</span>
                     <div className=' *:leading-10 *:ps-2  *:*:mx-1 *:text-sm'>
-                        <div className=' flex items-center'>
+                        <div className=' flex items-center hover:bg-[#3b4455] hover:rounded-md'>
                             <GrAnalytics></GrAnalytics>
                             <span onClick={(e) => para(e)}>Analytical</span>
                         </div>
@@ -64,80 +72,66 @@ export default function Menu_dashboard({ data }) {
                 <section className=' mt-5 ps-3 bg-[#222a39]'>
                     <span className='text-[#7c8fac] uppercase text-sm font-semibold'>apps</span>
                     <div className=' *:flex *:items-center *:ps-2 *:leading-10 *:*:mx-1 *:text-sm'>
-                        <div >
+                        <div className='myHov'>
                             <BsChatSquareText></BsChatSquareText>
-                            <span onClick={(e) => para(e)}>chat</span>
+                            <span >chat</span>
                         </div>
-                        <div >
+                        <div className='myHov'>
                             <LuCalendar></LuCalendar>
-                            <span onClick={(e) => para(e)}>calender</span>
+                            <span>calender</span>
                         </div>
-                        <div >
+                        <div className='myHov' >
                             <MdOutlineMail></MdOutlineMail>
-                            <span onClick={(e) => para(e)}>Email</span>
+                            <span >Email</span>
                         </div>
-                        <div >
+                        <div className='myHov' >
                             <IoCallOutline></IoCallOutline>
-                            <span onClick={(e) => para(e)}>contact</span>
+                            <span >contact</span>
                         </div>
-                        <div >
+                        <div className='myHov' >
                             <PiCertificate></PiCertificate>
                             <span>Courses</span>
                         </div>
-                        <div >
+                        <div className='myHov' >
                             <TbBrandCtemplar></TbBrandCtemplar>
                             <span>Employee</span>
                         </div>
-                        <div >
+                        <div className='myHov'>
                             <CiStickyNote></CiStickyNote>
                             <span>notes</span>
                         </div>
-                        <div >
+                        <div className='myHov'>
                             <BsTicketPerforated></BsTicketPerforated>
                             <span>ticket</span>
                         </div>
-                        <div>
+                        <div className='myHov'>
                             <LuPenSquare></LuPenSquare>
                             <span>todo</span>
                         </div>
-                        <div>
+                        <div className='myHov'>
                             <BiTask></BiTask>
                             <span>Taskboard</span>
                         </div>
-                        <div >
+                        <div className='myHov' >
                             <MdOutlineMail></MdOutlineMail>
-                            <span onClick={(e) => para(e)}>Email</span>
+                            <span >Blog</span>
                         </div>
-                        <div >
-                            <IoCallOutline></IoCallOutline>
-                            <span onClick={(e) => para(e)}>contact</span>
-                        </div>
-                        <div >
-                            <PiCertificate></PiCertificate>
-                            <span>Courses</span>
-                        </div>
-                        <div >
-                            <PiCertificate></PiCertificate>
-                            <span>Courses</span>
-                        </div>
-                        <div >
-                            <PiCertificate></PiCertificate>
-                            <span>Courses</span>
-                        </div>
-                        <div >
-                            <PiCertificate></PiCertificate>
-                            <span>Courses</span>
-                        </div>
-                        <div >
-                            <PiCertificate></PiCertificate>
-                            <span>Courses</span>
-                        </div>
-                        <div >
-                            <PiCertificate></PiCertificate>
-                            <span>Courses</span>
-                        </div>
-                    
                     </div>
+                </section>
+
+                <section className=' w-full  ps-3 mt-2'>
+                    <section className=' w-full bg-[#1c455d] rounded-md flex p-2'>
+                        <section>
+                            <Image className=' w-[40px] h-[40px] rounded-full' src={MyAdmin}></Image>
+                        </section>
+                        <section className=' flex-wrap flex *:w-full ps-2 '>
+                            <span className=' text-sm'>Marjan</span>
+                            <span className=' text-xs'>Programmer</span>
+                        </section>
+                        <section className=' flex items-center justify-center'>
+                            <FaPowerOff className=' text-[#5d87ff'  onClick={(e)=>backlog(e)}></FaPowerOff>
+                        </section>
+                    </section>
                 </section>
             </section>
         </section>
