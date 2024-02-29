@@ -63,7 +63,7 @@ export default function Menu_dashboard({ data }) {
                         </div>
                         <div className=' flex items-center hover:bg-[#3b4455] hover:rounded-md'>
                             <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                            <span onClick={(e) => para(e)}>eCommerce</span>
+                            <span onClick={(e) => para(e)}>ecommerce</span>
                         </div>
                     </div>
                 </section>
