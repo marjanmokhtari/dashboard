@@ -39,7 +39,7 @@ export default function Menu_dashboard({ data }) {
 
 
     const backlog=(e)=>{
-        console.log('hujjyf');
+     
         router.push('/')
     }
 
