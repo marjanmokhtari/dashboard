@@ -19,10 +19,12 @@ import '../globals.css'
 import { IoCloseSharp } from "react-icons/io5";
 import MyAdmin from '../assets/img/user-1.webp'
 import { FaPowerOff } from "react-icons/fa";
+import Link from 'next/link';
 
 
 
 export default function Menu_dashboard({ data }) {
+
     const router = useRouter()
 
     function para(e) {
@@ -60,7 +62,7 @@ export default function Menu_dashboard({ data }) {
                         </div>
                         <div className=' flex items-center hover:bg-[#3b4455] hover:rounded-md'>
                             <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                            <span onClick={(e) => para(e)}>Ecommerce</span>
+                            <Link href={'/dashboard/Ecommerce'}>Ecommerce</Link>
                         </div>
                     </div>
                 </section>
