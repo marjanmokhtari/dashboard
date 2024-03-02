@@ -15,11 +15,9 @@ import { BsTicketPerforated } from "react-icons/bs";
 import { LuPenSquare } from "react-icons/lu";
 import { BiTask } from "react-icons/bi";
 import { PiCertificate } from "react-icons/pi";
-
 import '../globals.css'
 import { IoCloseSharp } from "react-icons/io5";
 import MyAdmin from '../assets/img/user-1.webp'
-
 import { FaPowerOff } from "react-icons/fa";
 
 
@@ -29,7 +27,7 @@ export default function Menu_dashboard({ data }) {
 
     function para(e) {
         let pageName = e.target.innerText
-        router.push('/dashboard/'+pageName)
+        router.push('/dashboard/' + pageName)
     }
 
     const close_menu = () => {
@@ -37,11 +35,10 @@ export default function Menu_dashboard({ data }) {
     }
 
 
-    const backlog=(e)=>{
-     
+    const backlog = () => {
         router.push('/')
     }
-   
+
 
     return (
         <section className=' py-5 bg-[#222a39] *:w-full *:cursor-pointer   '>
@@ -63,7 +60,7 @@ export default function Menu_dashboard({ data }) {
                         </div>
                         <div className=' flex items-center hover:bg-[#3b4455] hover:rounded-md'>
                             <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                            <span onClick={(e) =>para(e)}>Ecommerce</span>
+                            <span onClick={(e) => para(e)}>Ecommerce</span>
                         </div>
                     </div>
                 </section>
@@ -82,7 +79,7 @@ export default function Menu_dashboard({ data }) {
                         </div>
                         <div className='myHov' >
                             <MdOutlineMail></MdOutlineMail>
-                            <span onClick={(e)=>para(e)}>Email</span>
+                            <span>Email</span>
                         </div>
                         <div className='myHov' >
                             <IoCallOutline></IoCallOutline>
@@ -129,7 +126,7 @@ export default function Menu_dashboard({ data }) {
                             <span className=' text-xs'>Programmer</span>
                         </section>
                         <section className=' flex items-center justify-center'>
-                            <FaPowerOff className=' text-[#5d87ff'  onClick={(e)=>backlog(e)}></FaPowerOff>
+                            <FaPowerOff className=' text-[#5d87ff' onClick={backlog}></FaPowerOff>
                         </section>
                     </section>
                 </section>
