@@ -31,9 +31,6 @@ export default function Menu_dashboard({ data }) {
         let pageName = e.target.innerText
         router.push('/dashboard/'+pageName)
     }
-    function para2() {
-        router.push('/dashboard/ecommerce')
-    }
 
     const close_menu = () => {
         data.current.classList.add('hidden')
@@ -66,7 +63,7 @@ export default function Menu_dashboard({ data }) {
                         </div>
                         <div className=' flex items-center hover:bg-[#3b4455] hover:rounded-md'>
                             <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                            <span onClick={para2}>ecommerce</span>
+                            <span onClick={(e) =>para(e)}>Ecommerce</span>
                         </div>
                     </div>
                 </section>
