@@ -28,9 +28,8 @@ export default function Menu_dashboard({ data }) {
     const router = useRouter()
 
     function para(e) {
-
         let pageName = e.target.innerText
-        router.push('/dashboard/' + pageName)
+        router.push('/dashboard/'+pageName)
     }
     function para2() {
         router.push('/dashboard/ecommerce')
@@ -45,6 +44,7 @@ export default function Menu_dashboard({ data }) {
      
         router.push('/')
     }
+   
 
     return (
         <section className=' py-5 bg-[#222a39] *:w-full *:cursor-pointer   '>
@@ -85,7 +85,7 @@ export default function Menu_dashboard({ data }) {
                         </div>
                         <div className='myHov' >
                             <MdOutlineMail></MdOutlineMail>
-                            <span >Email</span>
+                            <span onClick={(e)=>para(e)}>Email</span>
                         </div>
                         <div className='myHov' >
                             <IoCallOutline></IoCallOutline>
