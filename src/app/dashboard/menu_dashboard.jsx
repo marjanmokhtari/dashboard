@@ -43,8 +43,8 @@ export default function Menu_dashboard({ data }) {
 
 
     return (
-        <section className=' py-5 bg-[#222a39] *:w-full *:cursor-pointer   '>
-            {/* <button onClick={para}>go to jib</button> */}
+        <section className=' py-5 bg-[#222a39] *:w-full *:cursor-pointer '>
+           
             <section className=' w-full px-1 flex flex-wrap justify-center *:w-full *:text-[#7c8fac] '>
                 <figure className='py-2 ps-3 flex items-center justify-between'>
                     <Image src={Logo}></Image>
@@ -62,7 +62,7 @@ export default function Menu_dashboard({ data }) {
                         </div>
                         <div className=' flex items-center hover:bg-[#3b4455] hover:rounded-md'>
                             <AiOutlineShoppingCart></AiOutlineShoppingCart>
-                            <Link href={'/dashboard/Ecommerce'}>Ecommerce</Link>
+                            <span >Ecommerce</span>
                         </div>
                     </div>
                 </section>
@@ -81,7 +81,7 @@ export default function Menu_dashboard({ data }) {
                         </div>
                         <div className='myHov' >
                             <MdOutlineMail></MdOutlineMail>
-                            <span>Email</span>
+                            <Link href={'/dashboard/Ecommerce'}>Email</Link>
                         </div>
                         <div className='myHov' >
                             <IoCallOutline></IoCallOutline>

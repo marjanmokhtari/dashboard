@@ -1,7 +1,6 @@
 "use client"
 
 import React, { Children, createRef, useEffect, useRef, useState } from 'react'
-import { useRouter } from 'next/navigation';
 import '../globals.css'
 import Menu_dashboard from './menu_dashboard';
 import { IoMdMenu } from "react-icons/io";
@@ -12,8 +11,7 @@ import Image from 'next/image';
 
 // import mui
 import Badge from '@mui/material/Badge';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
+
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 
 
