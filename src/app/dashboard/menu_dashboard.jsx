@@ -81,7 +81,7 @@ export default function Menu_dashboard({ data }) {
                         </div>
                         <div className='myHov' >
                             <MdOutlineMail></MdOutlineMail>
-                            <Link href={'/dashboard/Ecommerce'}>Email</Link>
+                            <span>Email</span>
                         </div>
                         <div className='myHov' >
                             <IoCallOutline></IoCallOutline>
