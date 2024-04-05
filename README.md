@@ -6,7 +6,7 @@
 
   <p align="center">
     <br />
-    <a href="https://dashboard-navy-mu.vercel.app/">View Demo</a>
+    <a href="https://dashboard-navy-mu.vercel.app/">View Demo(VPN)</a>
       <p>Technologies Used - Next js , react , formik , MUI , tailwind
         <br/>
         <br/>
